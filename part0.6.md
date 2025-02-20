@@ -25,4 +25,11 @@ sequenceDiagram
     server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate server
     Note right of browser: The browser executes the callback function that renders the notes
+
+    Note right of browser: when the form button is pressed 
+    browser->>server: Entry of the user POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+    activate server
+    server-->>browser: 201 Created
+    deactivate server
 ```
